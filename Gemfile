@@ -15,4 +15,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "rspec-core", "~> 2.14", require: false
+  gem "rspec-rails", "~> 2.14", require: false
+  gem 'rspec-activemodel-mocks', require: false
 end
