@@ -1,0 +1,16 @@
+<h1 class='page-header'>History</h1>
+
+
+<p class="text-info">
+  History of games for user <%= current_user.email %>
+</p>
+
+<table class="table">
+  <tr>
+    <td>Date</td>
+    <td>Opponent</td>
+    <td>Score</td>
+    <td>Result</td>
+  </tr>
+  <%= render partial: 'game', collection: @games %>
+</table>

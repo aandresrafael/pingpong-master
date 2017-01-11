@@ -1,5 +1,17 @@
 <h1 class='page-header'>Leaderboard</h1>
 
-<div class="alert alert-warning" role="alert">This is a sample page.</div>
+<% if flash[:notice].present? %>
+  <div class="alert alert-info" role="info">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 
-<%= image_tag('leaderboard.png') %>
+<table class="table">
+  <tr>
+    <td>Rank</td>
+    <td>Name</td>
+    <td>Score</td>
+    <td>Games Played</td>
+  </tr>
+  <%= render partial: 'user', collection: @users %>
+</table>
